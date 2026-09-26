@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITREA Advisory &amp; Partners — Italy Türkiye Trade &amp; Investment Consulting</title>
+<meta name="description" content="ITREA Advisory & Partners connects businesses, investors and professionals across Italy and Türkiye through trade, investment, market entry and strategic business solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0c1e3a; --navy-2:#132a4d; --ivory:#f6f2e9; --ivory-2:#efe9db;
+    --green:#1d3b2c; --gold:#b8955a; --red:#7c2230; --ink:#20242b; --ink-soft:#5b6270;
+    --line: rgba(12,30,58,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--ivory); color:var(--ink);
+    font-family:'Work Sans',sans-serif; font-weight:300; font-size:16px; line-height:1.65;
+  }
+  h1,h2,h3,.logotype{font-family:'Cormorant Garamond',serif; font-weight:500; color:var(--navy); letter-spacing:.01em;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
+  section{padding:110px 0;}
+  @media(max-width:700px){section{padding:70px 0;} .wrap{padding:0 22px;}}
+
+  /* header */
+  header{position:sticky; top:0; z-index:50; background:rgba(246,242,233,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:20px 0;}
+  .brand{display:flex; flex-direction:column; line-height:1;}
+  .brand .logotype{font-size:24px; letter-spacing:.12em;}
+  .brand small{font-size:9.5px; letter-spacing:.16em; color:var(--ink-soft); margin-top:3px; font-family:'Work Sans',sans-serif;}
+  nav.links{display:flex; gap:34px; font-size:13.5px; letter-spacing:.03em;}
+  nav.links a{padding:4px 0; border-bottom:1px solid transparent; transition:border-color .2s;}
+  nav.links a:hover, nav.links a:focus-visible{border-color:var(--gold);}
+  .nav-right{display:flex; align-items:center; gap:26px;}
+  .langs{display:flex; gap:6px; font-size:12px; color:var(--ink-soft);}
+  .langs button{background:none; border:none; font:inherit; cursor:pointer; padding:2px 4px; color:var(--ink-soft);}
+  .langs button.active{color:var(--navy); font-weight:600;}
+  .cta-small{border:1px solid var(--navy); padding:9px 18px; font-size:12.5px; letter-spacing:.05em; white-space:nowrap;}
+  .cta-small:hover{background:var(--navy); color:var(--ivory);}
+  .burger{display:none; font-size:22px; background:none; border:none; cursor:pointer; color:var(--navy);}
+  @media(max-width:900px){
+    nav.links{display:none;}
+    .burger{display:block;}
+  }
+
+  /* hero */
+  .hero{position:relative; background:var(--navy); color:var(--ivory); overflow:hidden; padding:150px 0 130px;}
+  .hero .wrap{position:relative; z-index:2;}
+  .hero .eyebrow{font-size:13px; letter-spacing:.14em; color:var(--gold); margin-bottom:26px;}
+  .hero h1{font-size:clamp(38px,5.4vw,64px); color:var(--ivory); line-height:1.12; max-width:16ch;}
+  .hero p.lead{max-width:44ch; margin:26px 0 40px; font-size:17px; color:#d8ddea;}
+  .hero .ctas{display:flex; gap:18px; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:15px 30px; font-size:13px; letter-spacing:.06em; border:1px solid var(--gold);}
+  .btn.primary{background:var(--gold); color:var(--navy);}
+  .btn.primary:hover{background:transparent; color:var(--gold);}
+  .btn.ghost{border-color:rgba(246,242,233,.5); color:var(--ivory);}
+  .btn.ghost:hover{border-color:var(--ivory);}
+  .bridge{position:absolute; right:-6%; top:0; bottom:0; width:58%; opacity:.9;}
+  @media(max-width:900px){.bridge{opacity:.35; width:100%; right:0;}}
+
+  /* four pillars */
+  .pillars{background:var(--ivory-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .pillar-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:0;}
+  .pillar{padding:44px 30px; border-left:1px solid var(--line);}
+  .pillar:first-child{border-left:none;}
+  .pillar h3{font-size:21px; margin-bottom:10px;}
+  .pillar p{font-size:14px; color:var(--ink-soft);}
+  @media(max-width:820px){.pillar-grid{grid-template-columns:1fr 1fr;} .pillar:nth-child(3){border-left:none;}}
+  @media(max-width:520px){.pillar-grid{grid-template-columns:1fr;} .pillar{border-left:none; border-top:1px solid var(--line);} .pillar:first-child{border-top:none;}}
+
+  /* about */
+  .about .wrap{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:start;}
+  .about .kicker{font-size:13px; letter-spacing:.12em; color:var(--gold); margin-bottom:18px;}
+  .about h2{font-size:clamp(28px,3.4vw,38px); margin-bottom:22px; max-width:14ch;}
+  .about p{color:var(--ink-soft); max-width:52ch; margin-bottom:16px;}
+  .statement{border-left:2px solid var(--green); padding-left:26px;}
+  .statement p{font-family:'Cormorant Garamond',serif; font-size:23px; color:var(--navy); line-height:1.5; font-weight:500;}
+  @media(max-width:820px){.about .wrap{grid-template-columns:1fr; gap:30px;}}
+
+  /* services */
+  .services{background:var(--navy); color:var(--ivory);}
+  .services .kicker{color:var(--gold); font-size:13px; letter-spacing:.12em; margin-bottom:18px;}
+  .services h2{color:var(--ivory); font-size:clamp(28px,3.4vw,38px); max-width:18ch; margin-bottom:56px;}
+  .svc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(246,242,233,.14);}
+  .svc{background:var(--navy); padding:34px 30px; min-height:210px; display:flex; flex-direction:column;}
+  .svc .num{font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--gold); margin-bottom:14px;}
+  .svc h3{color:var(--ivory); font-size:20px; margin-bottom:12px; line-height:1.3;}
+  .svc ul{list-style:none; font-size:13px; color:#c3c9d8; line-height:1.9;}
+  .svc ul li{border-top:1px solid rgba(246,242,233,.1); padding-top:6px; margin-top:6px;}
+  .svc ul li:first-child{border-top:none; padding-top:0; margin-top:0;}
+  @media(max-width:900px){.svc-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.svc-grid{grid-template-columns:1fr;}}
+
+  /* italy-turkiye */
+  .bridge-section{background:var(--ivory);}
+  .bt-grid{display:grid; grid-template-columns:.9fr 1.3fr; gap:60px; align-items:center;}
+  .bt-mark{font-family:'Cormorant Garamond',serif; font-size:clamp(40px,6vw,80px); display:flex; align-items:center; gap:18px; color:var(--navy);}
+  .bt-mark span.it{color:var(--green);}
+  .bt-mark span.tr{color:var(--red);}
+  .bt-mark .arrow{font-size:.5em; color:var(--gold);}
+  .bt-list{list-style:none; font-size:15px; color:var(--ink-soft);}
+  .bt-list li{padding:16px 0; border-top:1px solid var(--line);}
+  .bt-list li:first-child{border-top:none;}
+  .bt-list li strong{color:var(--navy); font-weight:500;}
+  @media(max-width:820px){.bt-grid{grid-template-columns:1fr; gap:32px;}}
+
+  /* investment / real estate two-block */
+  .split{background:var(--ivory-2); border-top:1px solid var(--line);}
+  .split-grid{display:grid; grid-template-columns:1fr 1fr;}
+  .split-col{padding:70px 56px;}
+  .split-col:first-child{border-right:1px solid var(--line);}
+  .split-col .kicker{font-size:13px; letter-spacing:.12em; color:var(--gold); margin-bottom:16px;}
+  .split-col h3{font-size:28px; margin-bottom:16px;}
+  .split-col p{color:var(--ink-soft); margin-bottom:20px; max-width:40ch;}
+  .split-col ul{list-style:none; font-size:14px; color:var(--ink-soft);}
+  .split-col ul li{padding:8px 0; border-top:1px solid var(--line);}
+  .split-col ul li:first-child{border-top:none;}
+  @media(max-width:820px){.split-grid{grid-template-columns:1fr;} .split-col:first-child{border-right:none; border-bottom:1px solid var(--line);} .split-col{padding:50px 26px;}}
+
+  /* contact */
+  .contact{background:var(--navy); color:var(--ivory);}
+  .contact .wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:64px;}
+  .contact .kicker{color:var(--gold); font-size:13px; letter-spacing:.12em; margin-bottom:16px;}
+  .contact h2{color:var(--ivory); font-size:clamp(30px,4vw,42px); margin-bottom:20px;}
+  .contact p{color:#c3c9d8; max-width:36ch; margin-bottom:26px;}
+  .contact-info{font-size:14px; color:#c3c9d8; line-height:2.1;}
+  .contact-info strong{color:var(--ivory); font-weight:500;}
+  form{display:grid; gap:16px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  input, select, textarea{
+    background:transparent; border:none; border-bottom:1px solid rgba(246,242,233,.32);
+    color:var(--ivory); font-family:inherit; font-size:14.5px; padding:10px 2px; width:100%;
+  }
+  input::placeholder, textarea::placeholder{color:#8f97ab;}
+  select option{color:#111;}
+  input:focus, select:focus, textarea:focus{outline:none; border-bottom-color:var(--gold);}
+  textarea{resize:vertical; min-height:90px;}
+  form .btn{justify-self:start; margin-top:8px; background:var(--gold); color:var(--navy); border-color:var(--gold); cursor:pointer;}
+  form .btn:hover{background:transparent; color:var(--gold);}
+  @media(max-width:820px){.contact .wrap{grid-template-columns:1fr;} .row2{grid-template-columns:1fr;}}
+
+  /* footer */
+  footer{background:#08162c; color:#9aa3b8; padding:60px 0 30px; font-size:13px;}
+  .foot-top{display:flex; justify-content:space-between; flex-wrap:wrap; gap:30px; padding-bottom:34px; border-bottom:1px solid rgba(246,242,233,.1);}
+  .foot-brand .logotype{color:var(--ivory); font-size:20px; letter-spacing:.1em;}
+  .foot-brand p{margin-top:8px; max-width:30ch;}
+  .foot-links{display:flex; gap:60px; flex-wrap:wrap;}
+  .foot-links h4{font-family:'Work Sans',sans-serif; color:var(--ivory); font-size:12px; letter-spacing:.1em; margin-bottom:12px; font-weight:500;}
+  .foot-links ul{list-style:none;}
+  .foot-links li{margin-bottom:8px;}
+  .foot-links a:hover{color:var(--gold);}
+  .foot-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-top:22px;}
+
+  .section-head{max-width:640px; margin:0 auto 50px;}
+
+  /* whatsapp float */
+  .wa-float{position:fixed; right:22px; bottom:22px; z-index:60; display:flex; flex-direction:column; gap:10px; align-items:flex-end;}
+  .wa-btn{display:flex; align-items:center; gap:10px; background:#0c1e3a; color:#f6f2e9; padding:12px 18px; font-size:13px; letter-spacing:.03em; border:1px solid #b8955a; box-shadow:0 6px 20px rgba(12,30,58,.25);}
+  .wa-btn:hover{background:#132a4d;}
+  .wa-btn svg{width:16px; height:16px; fill:#25D366;}
+  @media(max-width:600px){.wa-float{right:14px; bottom:14px;} .wa-btn{padding:10px 14px; font-size:12px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <span class="logotype">ITREA</span>
+      <small>ADVISORY &amp; PARTNERS</small>
+    </div>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#italy-turkiye">Italy–Türkiye</a>
+      <a href="#investment">Investment</a>
+      <a href="#real-estate">Real Estate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <div class="langs">
+        <button class="active">IT</button><span>|</span><button>EN</button><span>|</span><button>TR</button>
+      </div>
+      <a class="cta-small" href="#contact">Request a Consultation</a>
+      <button class="burger" aria-label="Menu" onclick="document.querySelector('nav.links').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <svg class="bridge" viewBox="0 0 600 500" preserveAspectRatio="xMaxYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <rect x="40" y="60" width="120" height="380" fill="none" stroke="#1d3b2c" stroke-width="1.5" opacity="0.55"/>
+    <rect x="440" y="60" width="120" height="380" fill="none" stroke="#7c2230" stroke-width="1.5" opacity="0.55"/>
+    <path d="M40 260 C 220 180, 380 180, 560 260" fill="none" stroke="#b8955a" stroke-width="1.5" opacity="0.8"/>
+    <path d="M40 300 C 220 220, 380 220, 560 300" fill="none" stroke="#b8955a" stroke-width="1" opacity="0.4"/>
+  </svg>
+  <div class="wrap">
+    <div class="eyebrow">Italy Türkiye Trade &amp; Investment Consulting</div>
+    <h1>Connecting Italy and Türkiye. Creating the right opportunities.</h1>
+    <p class="lead">ITREA Advisory &amp; Partners connects businesses, investors and professionals across Italy and Türkiye through trade, investment, market entry and strategic business solutions.</p>
+    <div class="ctas">
+      <a class="btn primary" href="#contact">Request a Consultation</a>
+      <a class="btn ghost" href="#services">Explore Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="wrap pillar-grid">
+    <div class="pillar"><h3>Business</h3><p>Business development and cross-border relationships.</p></div>
+    <div class="pillar"><h3>Investment</h3><p>Investment opportunities and market intelligence.</p></div>
+    <div class="pillar"><h3>Trade</h3><p>Market entry, trade and international business support.</p></div>
+    <div class="pillar"><h3>Partnerships</h3><p>Connecting the right people, companies and institutions.</p></div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div>
+      <div class="kicker">About ITREA</div>
+      <h2>A trusted bridge between two markets</h2>
+      <p>ITREA Advisory &amp; Partners connects Italy and Türkiye through business relationships, investment opportunities, trade and professional solutions.</p>
+      <p>We support individuals, businesses and investors in navigating opportunities and challenges across both markets — providing tailored solutions directly, or through a trusted network of professional partners.</p>
+    </div>
+    <div class="statement">
+      <p>The right connections. The right solutions. The right people. The right place. The right time. The right results.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Services</div>
+      <h2>Ten areas of advisory, built on direct market knowledge of Italy and Türkiye</h2>
+    </div>
+    <div class="svc-grid">
+      <div class="svc"><div class="num">01</div><h3>Trade Policy Measures</h3><ul><li>Antidumping investigations</li><li>Subsidy investigations</li><li>Anti-circumvention investigations</li><li>Safeguard investigations</li></ul></div>
+      <div class="svc"><div class="num">02</div><h3>Market Entry Consulting</h3><ul><li>Importers, suppliers &amp; distributors</li><li>Customs &amp; trade regulations</li><li>Logistics</li></ul></div>
+      <div class="svc"><div class="num">03</div><h3>Investment Consulting</h3><ul><li>Market &amp; sector analysis</li><li>Investment incentives — Italy, EU, Türkiye</li><li>M&amp;A and partner search</li><li>Due diligence &amp; institutional links</li></ul></div>
+      <div class="svc"><div class="num">04</div><h3>Export Government Support</h3><ul><li>Trade fair support</li><li>Showroom &amp; warehouse rent support</li><li>Advertising &amp; promotion support</li></ul></div>
+      <div class="svc"><div class="num">05</div><h3>Trade Delegations</h3><ul><li>B2B sectoral delegations</li><li>General trade delegations</li></ul></div>
+      <div class="svc"><div class="num">06</div><h3>Accounting, Tax &amp; Finance</h3><ul><li>Company formation</li><li>Tax legislation</li></ul></div>
+      <div class="svc"><div class="num">07</div><h3>Legal Consulting</h3><ul><li>Trade &amp; investment law</li><li>Intellectual property law</li><li>Competition law</li><li>Receivables collection</li></ul></div>
+      <div class="svc"><div class="num">08</div><h3>HR Consulting</h3><ul><li>Cross-border workforce guidance</li></ul></div>
+      <div class="svc"><div class="num">09</div><h3>Brand &amp; Digital Marketing</h3><ul><li>Positioning across both markets</li></ul></div>
+      <div class="svc"><div class="num">10</div><h3>Real Estate Consulting</h3><ul><li>Commercial &amp; industrial property</li><li>Land &amp; facility search</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="italy-turkiye" class="bridge-section">
+  <div class="wrap bt-grid">
+    <div class="bt-mark"><span class="it">Italy</span><span class="arrow">↔</span><span class="tr">Türkiye</span></div>
+    <div>
+      <div class="kicker" style="color:var(--gold); font-size:13px; letter-spacing:.12em; margin-bottom:14px;">Italy — Türkiye</div>
+      <h2 style="margin-bottom:20px; font-size:clamp(26px,3vw,34px); max-width:20ch;">Two markets, one point of contact</h2>
+      <ul class="bt-list">
+        <li><strong>Market entry —</strong> establishing a footing in Italy or Türkiye with the right local guidance.</li>
+        <li><strong>Partner search —</strong> finding the business partners a new market needs.</li>
+        <li><strong>Trade development —</strong> building durable commercial relationships between the two countries.</li>
+        <li><strong>Investment opportunities —</strong> identifying where capital and interest align.</li>
+        <li><strong>Institutional connections —</strong> introductions to the local bodies that matter.</li>
+        <li><strong>Practical solutions —</strong> resolving the cross-border details that stall progress.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="split">
+  <div class="split-grid">
+    <div id="investment" class="split-col">
+      <div class="kicker">Investment</div>
+      <h3>Investment Advisory</h3>
+      <p>For investors and companies weighing opportunities in Italy or Türkiye — grounded in market analysis and local access.</p>
+      <ul>
+        <li>Market &amp; sector analysis</li>
+        <li>Investment incentives</li>
+        <li>M&amp;A and due diligence support</li>
+        <li>Local institutional connections</li>
+        <li>Land, factory &amp; facility search</li>
+      </ul>
+    </div>
+    <div id="real-estate" class="split-col">
+      <div class="kicker">Real Estate</div>
+      <h3>Real Estate Consulting</h3>
+      <p>A professional advisory service for investment-grade property — not a listings portal.</p>
+      <ul>
+        <li>Property search &amp; strategic advisory</li>
+        <li>Commercial &amp; industrial properties</li>
+        <li>Investment properties</li>
+        <li>Land &amp; facilities</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <div class="kicker">Contact</div>
+      <h2>Let's Connect</h2>
+      <p>Tell us about your business, investment or trade objective in Italy or Türkiye, and we'll follow up directly.</p>
+      <div class="contact-info">
+        <div><strong>ITREA Advisory &amp; Partners</strong></div>
+        <div>Galleria San Babila, 4/C, 20122 Milano MI</div>
+        <div><a href="mailto:emre.cetinkayis@itrea.it">emre.cetinkayis@itrea.it</a></div>
+        <div><a href="tel:+393486464602">+39 348 646 4602</a></div>
+        <div style="margin-top:14px;">
+          <a class="btn ghost" style="padding:10px 20px; font-size:12px;" href="https://wa.me/393486464602" target="_blank" rel="noopener">WhatsApp — Italia</a>
+        </div>
+        <div style="margin-top:8px;">
+          <a class="btn ghost" style="padding:10px 20px; font-size:12px;" href="https://wa.me/905399491665" target="_blank" rel="noopener">WhatsApp — Türkiye</a>
+        </div>
+      </div>
+    </div>
+    <form action="https://formsubmit.co/emre.cetinkayis@itrea.it" method="POST">
+      <input type="hidden" name="_subject" value="New consultation request — ITREA website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <div class="row2">
+        <input type="text" name="Name" placeholder="Name" required>
+        <input type="text" name="Company" placeholder="Company">
+      </div>
+      <div class="row2">
+        <input type="email" name="Email" placeholder="Email" required>
+        <input type="tel" name="Phone" placeholder="Phone">
+      </div>
+      <div class="row2">
+        <input type="text" name="Country" placeholder="Country">
+        <select name="Service of interest">
+          <option value="">Service of interest</option>
+          <option>Trade Policy Measures</option>
+          <option>Market Entry Consulting</option>
+          <option>Investment Consulting</option>
+          <option>Export Government Support</option>
+          <option>Trade Delegations</option>
+          <option>Accounting, Tax &amp; Finance</option>
+          <option>Legal Consulting</option>
+          <option>HR Consulting</option>
+          <option>Brand &amp; Digital Marketing</option>
+          <option>Real Estate Consulting</option>
+        </select>
+      </div>
+      <textarea name="Message" placeholder="Message"></textarea>
+      <button class="btn" type="submit">Request a Consultation</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="logotype">ITREA</div>
+        <p>Italy Türkiye Trade &amp; Investment Consulting. Business • Investment • Trade • Partnerships.</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#about">About ITREA</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#italy-turkiye">Italy–Türkiye</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ITREA Advisory &amp; Partners. Italy ↔ Türkiye.</span>
+      <span>Galleria San Babila, 4/C, 20122 Milano MI</span>
+    </div>
+  </div>
+</footer>
+
+<div class="wa-float">
+  <a class="wa-btn" href="https://wa.me/393486464602" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0zm6.9 17c-.3.8-1.6 1.5-2.2 1.6-.6.1-1.3.1-2.1-.1-.5-.1-1.1-.3-1.9-.7-3.3-1.4-5.5-4.7-5.6-4.9-.2-.2-1.3-1.7-1.3-3.3 0-1.6.8-2.3 1.1-2.7.3-.3.6-.4.9-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.3 1 2.4.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
+    WhatsApp — Italia
+  </a>
+  <a class="wa-btn" href="https://wa.me/905399491665" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S18.6 0 12 0zm6.9 17c-.3.8-1.6 1.5-2.2 1.6-.6.1-1.3.1-2.1-.1-.5-.1-1.1-.3-1.9-.7-3.3-1.4-5.5-4.7-5.6-4.9-.2-.2-1.3-1.7-1.3-3.3 0-1.6.8-2.3 1.1-2.7.3-.3.6-.4.9-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.3 1 2.4.1.2.1.4 0 .6-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.9.9 2.2 1.1.3.2.5.2.6.4.1.2.1.9-.2 1.6z"/></svg>
+    WhatsApp — Türkiye
+  </a>
+</div>
+
+</body>
+</html>
