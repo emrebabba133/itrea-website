@@ -98,7 +98,7 @@
   }
 
   // hero mouse parallax on map graphic
-  var map = document.querySelector('.map');
+  var map = document.querySelector('.signature');
   var hero = document.querySelector('.hero');
   if(map && hero && !reduced && window.matchMedia('(pointer:fine)').matches){
     hero.addEventListener('mousemove', function(e){
