@@ -1,0 +1,4 @@
+@view-transition{navigation:auto}
+@media(prefers-reduced-motion:no-preference){::view-transition-group(*){animation-duration:.55s;animation-timing-function:cubic-bezier(.22,.65,.27,1)}}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation-duration:.001s!important}}
+@media(prefers-reduced-motion:no-preference){@keyframes advisory-entry{from{opacity:.25}to{opacity:1}}.space-flight .hero .wrap{animation:advisory-entry .45s ease-out both}}
